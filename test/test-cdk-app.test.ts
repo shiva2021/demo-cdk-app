@@ -17,6 +17,8 @@ test("SQS Queue Created", () => {
   });
 
   template.resourceCountIs("AWS::Lambda::Function", 2);
+
+  template.resourceCountIs('AWS::Events::Rule', 1)
 });
 
 /** 
